@@ -1,5 +1,6 @@
 - name: some playbook
-  hosts:
+  hosts: localhost
+  become: true
   tasks:
     - name: installing nginx service
       ansible.builtin.yum:
