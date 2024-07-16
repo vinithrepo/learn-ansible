@@ -1,5 +1,6 @@
 - name: Frontend service
   hosts: APP
+  become: true
   tasks:
     - name: Installing Nginx server
       ansible.builtin.yum:
