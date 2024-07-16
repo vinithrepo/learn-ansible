@@ -1,5 +1,5 @@
 - name: Frontend service
-  hosts: APP
+  hosts: WEB
   become: true
   tasks:
     - name: Installing Nginx server
@@ -11,3 +11,8 @@
         name: nginx
         state: started
         enabled: yes
+- name: Frontend service
+  hosts: APP
+  become: true
+  roles:
+    - sample
