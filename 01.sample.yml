@@ -1,18 +1,8 @@
-- name: Frontend service
-  hosts: WEB
-  become: true
-  tasks:
-    - name: Installing Nginx server
-      ansible.builtin.yum:
-        name: httpd
-        state: latest
-    - name: Starting Nginx
-      ansible.builtin.systemd:
-        name: nginx
-        state: started
-        enabled: yes
-- name: Frontend service
+- name: sample playbook
   hosts: APP
   become: true
-  roles:
-    - sample
+  tasks:
+    - name: Install Nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: installed
