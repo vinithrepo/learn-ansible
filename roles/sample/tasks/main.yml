@@ -1,6 +1,6 @@
 - name: Installing Nginx server
   ansible.builtin.yum:
-    name: httpd
+    name: nginx
     state: latest
 - name: Starting Nginx
   ansible.builtin.systemd:

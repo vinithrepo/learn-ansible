@@ -19,3 +19,8 @@
       ansible.builtin.systemd:
         name: nginx
         state: started
+- name: Sample role
+  hosts: SERVER
+  become: true
+  roles:
+    - sample
