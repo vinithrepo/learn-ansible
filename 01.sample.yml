@@ -15,3 +15,7 @@
       ansible.builtin.systemd:
         name: nginx
         state: stopped
+    - name: start Nginx
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
