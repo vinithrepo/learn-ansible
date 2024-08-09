@@ -1,5 +1,5 @@
 - name: variable debug module
-  hosts: WEB
+  hosts: localhost
   become: true
   vars:
     URL: google.com
