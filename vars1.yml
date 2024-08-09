@@ -6,4 +6,4 @@
   tasks:
     - name: print variable
       ansible.builtin.debug:
-        msg: URL NAME = {{ URL }}
+        msg: URL NAME IS = {{ URL }}
