@@ -1,0 +1,15 @@
+- name: Conditions
+  hosts: all
+  connection: local
+  vars:
+    fruit: true
+    vegitable: false
+  tasks:
+    - name: print fruit name
+      ansible.builtin.debug:
+        msg: fruit name is Apple
+      when: fruit is true # will execute
+    - name: Print vegitable name
+      ansible.bultin.debug:
+        msg: Vegitable name is Carrot
+      when: vegitable is true  #vegitable name will not execute or display
